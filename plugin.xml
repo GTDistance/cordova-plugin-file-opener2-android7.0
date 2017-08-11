@@ -22,7 +22,7 @@
         <source-file src="src/android/xml/file_paths.xml" target-dir="res/xml" />
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="FileOpener2">
-                <param name="android-package" value="io.github.pwlin.cordova.plugins.fileopener2.FileOpener2" />
+                <param name="android-package" value="io.github.pwlin.cordova.plugins.fileopener2.OpenerFileProvider" />
             </feature>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/*">
