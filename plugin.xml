@@ -17,6 +17,7 @@
     <!-- Android -->
     <platform name="android">
         <source-file src="src/android/io/github/pwlin/cordova/plugins/fileopener2/FileOpener2.java" target-dir="src/io/github/pwlin/cordova/plugins/fileopener2" />
+        <source-file src="src/android/io/github/pwlin/cordova/plugins/fileopener2/OpenerFileProvider.java" target-dir="src/io/github/pwlin/cordova/plugins/fileopener2" />
         <source-file src="src/android/libs/android-support-v4.jar" target-dir="libs" />
         <source-file src="src/android/xml/file_paths.xml" target-dir="res/xml" />
         <config-file target="res/xml/config.xml" parent="/*">
@@ -28,7 +29,7 @@
             <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <provider android:authorities="${applicationId}.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            <provider android:authorities="${applicationId}.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="io.github.pwlin.cordova.plugins.fileopener2">
                 <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths" />
             </provider>
         </config-file>
